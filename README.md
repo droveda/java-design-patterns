@@ -45,3 +45,4 @@ e criar um metodo para adicionar os interessados a observar o evento de geracao 
 Ao gerar o pedido percorre-se a lista de interessados com cada um executando a sua 
 acao desejada.
 
+## Decorator
