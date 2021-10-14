@@ -1,5 +1,7 @@
 package org.example.study.builder;
 
+import org.example.study.observer.AcaoAposGerarNota;
+
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
@@ -14,6 +16,15 @@ public class NotaFiscalBuilder {
     private String obs;
     private LocalDateTime data;
 
+    private List<AcaoAposGerarNota> acoes;
+
+    public NotaFiscalBuilder() {
+        this.acoes = new ArrayList<>();
+    }
+
+    public void adicionaAcao(AcaoAposGerarNota acaoAposGerarNota) {
+        this.acoes.add(acaoAposGerarNota);
+    }
 
     public NotaFiscalBuilder empresa(String razaoSocial) {
         this.razaoSocial = razaoSocial;
@@ -43,13 +54,17 @@ public class NotaFiscalBuilder {
     }
 
     public NotaFiscal build() {
-        return new NotaFiscal(razaoSocial,
+        NotaFiscal nf = new NotaFiscal(razaoSocial,
                 cnpj,
                 data,
                 valorBruto,
                 impostos,
                 todosItens,
                 obs);
+
+        acoes.forEach(a -> a.executa(nf));
+
+        return nf;
     }
 
 }
