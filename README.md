@@ -54,3 +54,36 @@ bastando escolher no momento da instanciação, quais instancias serão utilizad
 para realizar o trabalho.
 
 ## Builder
+* Auxilia a criacao de objetos complexos, exemplo builder para objeto nofa fiscal.
+* Facilita criacao de objetos com muitos parametros
+
+## Factory
+* Facilita a criacao de objetos complicados, exemplo conexao com banco de dados retornando uma 
+Connection
+* Centraliza o processo de criacao do objeto
+
+## Flyweight
+* Exemplo software tipo guitarpro, em que utiliza notas musicais
+* Exemplo objeto nota musical é sempre o mesmo entrao criamos uma estrutura em
+que sempre é retornado o mesmo objeto para poupar memoria
+* Aplicações gráficas geralmente fazem uso desse padrão, já que elas tem muito objeto repetido.
+
+## Memento
+* Exemplo manter historico de alteracoes em um objeto guardar eles e poder voltar a 
+um estado especifico do objeto.
+* Exemplo alteracoes em um objeto do tipo contrato
+
+## DSLs e o Interpreter
+* Exemplo calculadora cientifica
+* Arvore de expressao e essa arvore se auto avaliar
+
+## Visitor
+* Exemplo imprimir a expressao de uma arvore(expressao)
+* Navegar na arvore para fazer algo
+* Exemplo Hibernate ao criar as queries
+
+## Bridge e Adapter
+* Bridge -> interface unica para poder padronizar chamada a implementacoes diferentes.
+* Exemplo Bridge -> formas diferentes de recuperar um mapa (google maps, map link)
+* Adapter -> interface que adapta uma interface antiga a uma nova interface
+* Adapter -> util quando esta reescrevendo um sistema. Exemplo interface Relogio
