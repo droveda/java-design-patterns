@@ -87,3 +87,9 @@ um estado especifico do objeto.
 * Exemplo Bridge -> formas diferentes de recuperar um mapa (google maps, map link)
 * Adapter -> interface que adapta uma interface antiga a uma nova interface
 * Adapter -> util quando esta reescrevendo um sistema. Exemplo interface Relogio
+
+## Facade
+* Interface única para simplificar várias chamadas a métodos e classes diferentes em uma única interface.
+
+## Singleton
+* Retorna apenas uma única instancia de uma classe.
